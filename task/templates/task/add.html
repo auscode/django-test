@@ -1,0 +1,16 @@
+{% extends "task/layout.html" %}
+
+<!-- starting of the body block  -->
+
+{% block body %}
+<ul>
+  <form action="{% url 'task:add' %}" method="POST">
+    {% csrf_token %}
+    <!-- adding django temp for the forms -->
+    {{ form }}
+    <input type="submit" name="s-btn" id="" />
+  </form>
+  <!-- end of the for loop -->
+</ul>
+<a href="{% url 'task:index' %}">view Task</a>
+{% endblock %}

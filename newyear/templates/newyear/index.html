@@ -1,0 +1,18 @@
+{% load static %}
+<!-- loading the static file which contains our css files -->
+<html lang="en">
+  <head>
+    <title>New Year</title>
+    <!-- linking the file of the css file  -->
+    <link href="{% static 'newyear/styles.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- using django template in html to give logic  -->
+    {% if newyear %}
+    <h1>Yes</h1>
+    {% else %}
+    <h1>NO</h1>
+    {% endif %}
+    <!--to show its the end of the if statement> -->
+  </body>
+</html>
